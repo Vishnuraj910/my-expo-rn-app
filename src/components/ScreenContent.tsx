@@ -1,7 +1,8 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Pressable, Text, TouchableOpacity, View } from 'react-native';
 
 import { EditScreenInfo } from './EditScreenInfo';
+import { Link, router } from 'expo-router';
 
 type ScreenContentProps = {
   title: string;
@@ -12,10 +13,17 @@ type ScreenContentProps = {
 export const ScreenContent = ({ title, path, children }: ScreenContentProps) => {
   return (
     <View className={styles.container}>
-      <Text className={styles.title}>{title}</Text>
+      <Text className={styles.title}>{title} Vishnu</Text>
       <View className={styles.separator} />
       <EditScreenInfo path={path} />
       {children}
+      <Link href="/users/1">User 1</Link>
+      <TouchableOpacity onPress={() => router.push({
+        pathname: '/users/[id]',
+        params: { id: '2' }
+      })}>
+        <Text>User Page 2</Text>
+      </TouchableOpacity>
     </View>
   );
 };
