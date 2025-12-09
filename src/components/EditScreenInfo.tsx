@@ -5,6 +5,12 @@ export const EditScreenInfo = ({ path }: { path: string }) => {
   const description =
     'Change any of the text, save the file, and your app will automatically update.';
 
+  fetch('https://jsonplaceholder.typicode.com/todos')
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json);
+    });
+
   return (
     <View>
       <View className={styles.getStartedContainer}>

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Pressable, Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 
-import { EditScreenInfo } from './EditScreenInfo';
 import { Link, router } from 'expo-router';
+import { EditScreenInfo } from './EditScreenInfo';
 
 type ScreenContentProps = {
   title: string;
@@ -18,10 +18,13 @@ export const ScreenContent = ({ title, path, children }: ScreenContentProps) => 
       <EditScreenInfo path={path} />
       {children}
       <Link href="/users/1">User 1</Link>
-      <TouchableOpacity onPress={() => router.push({
-        pathname: '/users/[id]',
-        params: { id: '2' }
-      })}>
+      <TouchableOpacity
+        onPress={() =>
+          router.push({
+            pathname: '/users/[id]',
+            params: { id: '2' },
+          })
+        }>
         <Text>User Page 2</Text>
       </TouchableOpacity>
     </View>
