@@ -1,5 +1,7 @@
+import { router } from 'expo-router';
 import { ReactElement } from 'react';
 import { Alert, Text, TouchableOpacity, View } from 'react-native';
+import { Button } from 'tamagui';
 
 export default function VishnuComponent(): ReactElement {
   return (
@@ -12,6 +14,15 @@ export default function VishnuComponent(): ReactElement {
           }}>
           <Text>Press Me</Text>
         </TouchableOpacity>
+        <Button
+          size="$4"
+          mt="$4"
+          onPress={() => {
+            router.back();
+          }}>
+          {' '}
+          Back{' '}
+        </Button>
       </View>
     </>
   );

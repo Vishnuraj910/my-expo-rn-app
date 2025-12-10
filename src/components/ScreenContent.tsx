@@ -29,7 +29,7 @@ export const ScreenContent = ({ title, path, children }: ScreenContentProps) => 
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() =>
-          router.replace({
+          router.push({
             pathname: '/vishnu',
           })
         }>
