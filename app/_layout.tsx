@@ -19,6 +19,14 @@ export default function RootLayout() {
           animation: 'slide_from_right',
         }}
       />
+      <Stack.Screen
+        name="vishnu/index"
+        options={{
+          headerShown: true,
+          headerTitle: 'Vishnu Page',
+          animation: 'slide_from_right',
+        }}
+      />
     </Stack>
   );
 }

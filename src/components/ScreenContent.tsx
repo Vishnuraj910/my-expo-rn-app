@@ -25,7 +25,15 @@ export const ScreenContent = ({ title, path, children }: ScreenContentProps) => 
             params: { id: '2' },
           })
         }>
-        <Text>User Page 2</Text>
+        <Text>User 2</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() =>
+          router.replace({
+            pathname: '/vishnu',
+          })
+        }>
+        <Text>Vishnu Page</Text>
       </TouchableOpacity>
     </View>
   );
