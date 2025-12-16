@@ -14,6 +14,13 @@ export default function VishnuComponent(): ReactElement {
           }}>
           <Text>Press Me</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          className="rounded border-b-4 border-blue-700 bg-blue-500 px-4 py-2 font-bold text-white hover:border-blue-500 hover:bg-blue-400"
+          onPress={() => {
+            Alert.alert('Hello from alert #2!');
+          }}>
+          <Text>Press Me 2</Text>
+        </TouchableOpacity>
         <Button
           size="$4"
           mt="$4"
